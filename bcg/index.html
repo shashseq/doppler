@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+<link href="assets/css/font-awesome.css" rel="stylesheet">
+<script src="node_modules/fusioncharts/fusioncharts.js"></script>
+<script src="node_modules/fusioncharts/fusioncharts.charts.js"></script>
+<script src="node_modules/fusioncharts/fusioncharts.powercharts.js"></script>
+<script src="node_modules/fusioncharts/fusioncharts.widgets.js"></script>
+
+<script src="main.js"></script>
+<script src="app.min.js"></script>
+<link href="bootstrap.css" rel="stylesheet"> 
+<link href="org.css" rel="stylesheet">
+<link href="scenario.css" rel="stylesheet">
+</head>
+<body style="background-color:#190505;" ng-app="dashApp">
+<div ng-hide="hide_home" class="row">
+<div class="col-md-10">
+    <a href="#main">
+    <i class="fa fa-3x fa-home" style="margin-left:60px;margin-top:5px;color:gray;" aria-hidden="true"></i>
+    </a>
+</div>
+<div class="col-md-2">
+<img class="pull-right" style="display:inline; width:100px;height:55px;margin:0px;margin-top:5px;margin-right:35px;" src="world.png">
+</div>
+</div>
+<div ng-view autoscroll="true"></div>
+</body>
+</html>

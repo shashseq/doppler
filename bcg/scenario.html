@@ -1,0 +1,267 @@
+<div style="padding:30px;width:1380px;">
+<div class="container-fluid" style="margin-left:30px ;background-color:gray;border-radius:5px;width:1200px;">
+<div class="row">
+<br>
+<div class="col-md-1">
+<span style="color:white;font-size:20px;margin:0;">Scenarios:<span>
+</div>
+<div class="col-md-3">
+<select  class="form-control"  ng-model="scenario" ng-change="scenChange()" >
+                 <option value="base" >1. Base Case</option>
+                 <option value="down" >2. Downside Scenario</option>
+                 <option value="up">3. Upside Scenario</option>
+                 <option value="4">4. Divest Division 2</option>
+                 <option value="5">5. Divest Plants 2-3, 2-4</option>
+                 <option value="6">6. Acquire Target ABC</option>
+               </select>
+</div>
+<div class="col-md-7">
+<a href="#scen_performance/{{scenario}}">
+<button type="button" class="btn btn-success pull-right" style="margin-right:100px;">Update</button>
+</a>
+</div>
+</div> <!-- row -->
+<div class="row">
+<div class="col-md-10">
+<table class="uprightTbl2">
+<tr>
+<td style="color:black;width:200px;" >&nbsp;</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="color:black;width:200px;">&nbsp;</td>
+<td style="text-align:center">2017</td>
+<td style="text-align:center">2018</td>
+<td style="text-align:center">2019</td>
+<td style="text-align:center">2020</td>
+<td style="text-align:center">2021</td>
+<td style="text-align:center">2022</td>
+<td style="text-align:center">2023</td>
+<td style="text-align:center">2024</td>
+<td style="text-align:center">2025</td>
+<td style="text-align:center">2026</td>
+<td style="text-align:center">2027</td>
+</tr>
+<tr>
+<td style="color:black;width:200px;text-align:center;"> Commodity Indexes</td>
+<td>&nbsp;</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="color:white;"><i class="fa fa-cube" aria-hidden="true" style="display:inline;"></i>&nbsp;&nbsp;&nbsp;Steel</td>
+<td ><input style="text-align:right;padding-right:5px;" type="text" value="{{data.steel[0]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.steel[1]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.steel[2]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.steel[3]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.steel[4]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.steel[5]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.steel[6]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.steel[7]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.steel[8]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.steel[9]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.steel[10]}}"></td>
+</tr>
+
+<tr>
+<td style="color:white;"><i class="fa fa-cubes" aria-hidden="true" style="display:inline;"></i>&nbsp;&nbsp;Coal</td>
+<td ><input style="text-align:right;padding-right:5px;" type="text" value="{{data.coal[0]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.coal[1]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.coal[2]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.coal[3]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.coal[4]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.coal[5]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.coal[6]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.coal[7]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.coal[8]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.coal[9]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.coal[10]}}"></td>
+</tr>
+
+
+<tr>
+<td style="color:white;"><i class="fa fa-flask" aria-hidden="true" style="display:inline;"></i>&nbsp;&nbsp;&nbsp;&#8239;Oil </td>
+<td ><input style="text-align:right;padding-right:5px;" type="text" value="{{data.oil[0]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.oil[1]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.oil[2]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.oil[3]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.oil[4]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.oil[5]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.oil[6]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.oil[7]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.oil[8]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.oil[9]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.oil[10]}}"></td>
+</tr>
+
+
+<tr>
+<td style="color:white;">&nbsp;<i class="fa fa-bolt" aria-hidden="true" style="display:inline;" ></i>&nbsp;&nbsp;&nbsp;&#8239;Electricity</td>
+<td ><input style="text-align:right;padding-right:5px;" type="text" value="{{data.electricity[0]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.electricity[1]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.electricity[2]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.electricity[3]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.electricity[4]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.electricity[5]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.electricity[6]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.electricity[7]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.electricity[8]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.electricity[9]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.electricity[10]}}"></td>
+</tr>
+
+
+<tr>
+<td style="color:black;text-align:center;" > Cost Inflation Rates</td>
+<td>&nbsp;</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+
+<tr>
+<td style="color:white;"> <i class="fa fa-user" aria-hidden="true" style="display:inline;"></i>&nbsp;&nbsp;&nbsp;&#8239;Direct Labor</td>
+<td ><input style="text-align:right;padding-right:5px;" type="text" value="{{data.direct_labor[0]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.direct_labor[1]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.direct_labor[2]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.direct_labor[3]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.direct_labor[4]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.direct_labor[5]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.direct_labor[6]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.direct_labor[7]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.direct_labor[8]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.direct_labor[9]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.direct_labor[10]}}"></td>
+</tr>
+
+<tr>
+<td style="color:black;text-align:center;" > Exchange Rates</td>
+<td>&nbsp;</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td style="color:white;"><i class="fa fa-eur" aria-hidden="true" style="display:inline;" ></i>&nbsp;&nbsp;&nbsp;&nbsp;&#8239;EUR / USD</td>
+<td ><input style="text-align:right;padding-right:5px;" type="text" value="{{data.eur_usd[0]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.eur_usd[1]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.eur_usd[2]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.eur_usd[3]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.eur_usd[4]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.eur_usd[5]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.eur_usd[6]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.eur_usd[7]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.eur_usd[8]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.eur_usd[9]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.eur_usd[10]}}"></td>
+</tr>
+
+
+<tr>
+<td style="color:white;"><i class="fa fa-gbp" aria-hidden="true" style="display:inline;" ></i>&nbsp;&nbsp;&nbsp;&nbsp;&#8239;GBP / USD</td>
+<td ><input style="text-align:right;padding-right:5px;" type="text" value="{{data.gbp_usd[0]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.gbp_usd[1]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.gbp_usd[2]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.gbp_usd[3]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.gbp_usd[4]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.gbp_usd[5]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.gbp_usd[6]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.gbp_usd[7]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.gbp_usd[8]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.gbp_usd[9]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.gbp_usd[10]}}"></td>
+</tr>
+
+
+<tr>
+<td style="color:white;"><i class="fa fa-yen" aria-hidden="true" style="display:inline;" ></i>&nbsp;&nbsp;&nbsp;&nbsp;&#8239;USD / YEN</td>
+<td ><input style="text-align:right;padding-right:5px;" type="text" value="{{data.usd_yen[0]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.usd_yen[1]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.usd_yen[2]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.usd_yen[3]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.usd_yen[4]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.usd_yen[5]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.usd_yen[6]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.usd_yen[7]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.usd_yen[8]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.usd_yen[9]}}"></td>
+<td><input  style="text-align:right;padding-right:5px;" type="text" value="{{data.usd_yen[10]}}"></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr><tr>
+<td>&nbsp;</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr><tr>
+<td>&nbsp;</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+
+</table>
+</div>
+</div> <!-- end of div row -->
+</div> <!-- end of div container-fluid -->
+</div>
